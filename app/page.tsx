@@ -1,3 +1,9 @@
 export default function Home() {
- <h1>her kommer hovedinnholdet på min hundeside</h1> 
+  return (  
+  <>
+  
+    <h1>Velkommen til hundeportalen</h1>
+    <p>Er du på leting etter en ny bestevenn eller en informasjon om den du allerede har. Dette er siden for deg</p>
+  </>
+  )
 }

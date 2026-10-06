@@ -1,5 +1,8 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
+import "@/app/API/dogbreeds.css";
+import "@/app/globals.css";
+import Image from "next/image";
 
 type DogBreeds = DogBreed[];
 export default async function DogPage() {
@@ -15,12 +18,14 @@ export default async function DogPage() {
   return (
     <>
       <h1>Her kommer alle hundene</h1>
-      <section>
+      <section className="dogBreed-section">
         {breeds.map((breed) => (
-          <article key={breed.id}>
-            {" "}
-            <h1>{breed.attributes.name}</h1>
-            <h2>{breed.attributes.description}</h2>
+          <article className="dogBreed-card" key={breed.id}>
+            <Image alt="test" src={breed.attributes.images[0].thumb} width={200} height={200}/>
+            <h2>{breed.attributes.name}</h2>
+            <p>
+              <strong>Kalles også:</strong> {breed.attributes.other_names.join(", ")}{" "}
+            </p>
           </article>
         ))}
       </section>

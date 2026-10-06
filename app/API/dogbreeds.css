@@ -1,0 +1,17 @@
+
+.dogBreed-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .dogBreed-card {
+    border-radius: 1.5rem;
+    height: auto;
+    border: solid black;
+    background-color: rgb(241, 196, 159);
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    }
+}
