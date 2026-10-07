@@ -1,79 +1,105 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-:root {
---Main-txt: #263D33;
---card-color: white;
---background-color:#F9F9F6;
-}
-
-
+/*Global styling*/
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
+:root {
+  --Main-txt: #263d33;
+  --card-color: white;
+  --background-color: #f5efe6;
+  --header-background: #e8dccb;
+  --button-background: #8b6a4e;
+}
+.CTA {
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 2.5rem;
+  border: solid thin;
+  background-color: var(--button-background);
+  color: white;
+}
 
-/*Fonter*/
+/*Globale fonter*/
 h1 {
-font-family: "inter", sans-serif;
-font-weight: 100;
-font-size: 2rem;
-
+  font-family: "inter", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #8b6a4e;
 }
 h2 {
-   font-family: "inter", sans-serif;
-   font-weight: 100;
-   font-size: 1.5rem;
+  font-family: "inter", sans-serif;
+  font-weight: 100;
+  font-size: 1.5rem;
 }
 h3 {
-   font-family: "inter", sans-serif;
-   font-weight: 100;
-   font-size: 1rem;  
+  font-family: "inter", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
 }
 
-/*header*/
+/*header-seksjon*/
+
+.hero-section {
+  background-color: #e8dccb;
+  display: flex;
+  justify-content: space-around;
+}
+.hero-section-slogan {
+  font-size: 3rem;
+  font-family: fantasy;
+  color: #8b6a4e;
+}
 .hero-img {
-display: block;
-width: 100%;
-object-fit: cover;
-object-position: center;
-height: 20rem;
+  display: block;
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+  height: 20rem;
 }
 nav {
-background-color: white;
-display: flex;
-justify-content:flex-start;
-align-items: center;
-gap: 1rem;
-padding-top: 0rem;
-height: 3rem;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0rem;
+  height: 3rem;
 
-a {
-color: black;
-text-decoration: none;
-font-size: 1.5rem;
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
 
-}
-
-a:hover{
+  a:hover {
     color: blue;
+  }
+
+  a:active {
+    transform: translateY(0.1rem);
+  }
+}
+.hero-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-a:active{
-transform: translateY(0.1rem);
-}
-}
+
+
+
 
 /*Styling for footer*/
-
 .footer {
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }

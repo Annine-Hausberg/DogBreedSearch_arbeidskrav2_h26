@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import "@/app/API/dogbreeds.css";
 import "@/app/globals.css";
 import Image from "next/image";
+import SearchInput from "@/components/Search";
 
 type DogBreeds = DogBreed[];
 export default async function DogPage() {
@@ -17,7 +18,9 @@ export default async function DogPage() {
 
   return (
     <>
-      <h1>Her kommer alle hundene</h1>
+    <section className="dog-page-container">
+      <SearchInput/>
+      <aside>Her kommer filtreringsfunksjonene</aside>
       <section className="dogBreed-section">
         {breeds.map((breed) => (
           <article className="dogBreed-card" key={breed.id}>
@@ -31,7 +34,8 @@ export default async function DogPage() {
             <button>Bli kjent med rasen</button>
           </article>
         ))}
-      </section>
+      </section></section>
+      
     </>
   );
 }
