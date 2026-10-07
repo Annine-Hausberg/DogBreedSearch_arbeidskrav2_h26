@@ -1,11 +1,39 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+--Main-txt: #263D33;
+--card-color: white;
+--background-color:#F9F9F6;
+}
+
+
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 html {
-    background-color: rgb(158, 127, 109);
+    background-color: var(--background-color);
+}
+
+
+/*Fonter*/
+h1 {
+font-family: "inter", sans-serif;
+font-weight: 100;
+font-size: 2rem;
+
+}
+h2 {
+   font-family: "inter", sans-serif;
+   font-weight: 100;
+   font-size: 1.5rem;
+}
+h3 {
+   font-family: "inter", sans-serif;
+   font-weight: 100;
+   font-size: 1rem;  
 }
 
 /*header*/

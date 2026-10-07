@@ -1,17 +1,32 @@
-
 .dogBreed-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 
-    .dogBreed-card {
-    border-radius: 1.5rem;
+  .dogBreed-card {
+    border-radius: 0.5rem;
     height: auto;
-    border: solid black;
-    background-color: rgb(241, 196, 159);
-    padding: 1rem;
+    background-color: var(--card-color);
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    }
+    justify-content: space-between;
+    height: auto;
+  }
+  .dogBreed-card img {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+  }
+
+  .dogBreed-card button {
+    display: flex;
+    width: 8rem;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 0.2rem;
+    border: none;
+    color: white;
+  }
 }
