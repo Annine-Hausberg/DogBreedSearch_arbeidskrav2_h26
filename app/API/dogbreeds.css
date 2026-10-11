@@ -76,3 +76,22 @@ aside {
   grid-template-columns: 1fr 2fr;
   gap: 0.5rem;
 }
+
+.individualBreed-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 1rem;
+
+  .individualBreed-firstColumn {
+    display: flex;
+    flex-direction: column;
+ gap: 0.5rem;
+  }
+.IndividualBreed-image {
+  grid-row: 1 /span 2;
+  grid-column: 2;
+  justify-self: right;
+  border-radius: 50%;
+}
+}
+
