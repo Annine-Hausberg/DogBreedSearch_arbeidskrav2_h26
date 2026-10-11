@@ -2,12 +2,17 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin: 2rem;
+  gap: 1rem;
 }
 .dogBreed-section {
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+
+  .individualBreed-section {
+    display: flex;
+  }
 
   .dogBreed-card {
     border-radius: 0.5rem;
@@ -17,11 +22,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
+    padding: 1rem;
   }
   .dogBreed-card img {
     border-radius: 1rem 1rem 0 0;
     width: 100%;
+    object-fit: cover;
+    object-position: center 15%;
   }
 
   .dogBreed-card button {
@@ -39,6 +46,16 @@
 
 aside {
   grid-column: 1;
+  background-color: white;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  .size-choices-header {
+    grid-column: 1 / -1;
+  }
 }
 
 .searchform {
@@ -50,4 +67,12 @@ aside {
   border-radius: 1rem;
   width: 100%;
   padding: 1rem;
+}
+.activity-choices,
+.coatCare-choices,
+.size-choices,
+.experience-choices {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
 }
