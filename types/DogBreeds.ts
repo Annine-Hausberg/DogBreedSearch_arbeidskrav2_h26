@@ -7,12 +7,13 @@ export type DogImage = {
 };
 
 export type DogTraits = {
-energy: number;
-barking: number;
-grooming: number;
-temperament: string [];
-
-}
+  energy: number;
+  barking: number;
+  grooming: number;
+  temperament: string[];
+  exercise_minutes: number;
+  apartment_friendly: number;
+};
 export type DogBreed = {
   id: string;
 
@@ -22,7 +23,8 @@ export type DogBreed = {
     hypoallergenic: boolean;
     other_names: string[];
     images: DogImage[];
-    traits:DogTraits;
+    traits: DogTraits;
+    
   };
 };
 export type DogBreeds = DogBreed[];

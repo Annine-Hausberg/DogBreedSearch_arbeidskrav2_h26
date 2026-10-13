@@ -95,3 +95,7 @@ aside {
 }
 }
 
+.search-input {
+  display: flex;
+  outline: none;
+}
