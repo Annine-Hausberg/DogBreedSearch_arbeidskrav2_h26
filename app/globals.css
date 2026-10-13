@@ -17,14 +17,6 @@ html {
   --header-background: #e8dccb;
   --button-background: #8b6a4e;
 }
-.CTA {
-  border-radius: 0.5rem;
-  width: 10rem;
-  height: 2.5rem;
-  border: solid thin;
-  background-color: var(--button-background);
-  color: white;
-}
 
 /*Globale fonter*/
 h1 {
@@ -47,33 +39,35 @@ h3 {
 /*header-seksjon*/
 
 .hero-section {
-  background-color: #e8dccb;
+  background-color: #fefefe;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0rem;
+  position: relative;
+}
 
-}
-.hero-section-slogan {
-  font-size: 3rem;
-  font-family: fantasy;
-  color: #8b6a4e;
-}
 .hero-img {
   display: block;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
   object-fit: cover;
   object-position: center;
-  height: 20rem;
+  height: auto;
 }
 nav {
   background-color: white;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 2rem;
   height: 3rem;
 
+  .nav-right-section {
+    display: flex;
+    gap: 1.5rem;
+  }
   a {
     color: black;
     text-decoration: none;
@@ -87,16 +81,52 @@ nav {
   a:active {
     transform: translateY(0.1rem);
   }
+  .logo {
+    display: block;
+    justify-content: center;
+    width: 15%;
+    object-fit: cover;
+    height: auto;
+  }
 }
-.hero-section-text {
+
+.searchform {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20rem;
+  align-self: center;
 }
-
-
-
-
+.search-input {
+  display: flex;
+  outline: none;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 2.5rem;
+  border: solid thin;
+  background-color: white;
+  color: var(--button-background);
+  padding: 0.75rem 3rem 0.75rem 1rem;
+}
+.search-input-button {
+  position: absolute;
+  right: 0.5rem;
+  background-color: white;
+  border: none;
+}
+.CTA {
+  display: flex;
+  outline: none;
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: var(--button-background);
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
 
 /*Styling for footer*/
 .footer {
@@ -107,5 +137,4 @@ nav {
   width: 100%;
   color: white;
   padding: 0.5rem 2rem;
-
 }
