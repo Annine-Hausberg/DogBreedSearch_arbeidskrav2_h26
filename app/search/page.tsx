@@ -10,10 +10,13 @@ export type SearchPageprops = {
 
 export default async function SearchPage({ searchParams }: SearchPageprops) {
   const { q = "" } = await searchParams;
-  const response = await fetch(`https://dogapi.dog/api/v2/breeds`);
+  const response = await fetch(`https://dogapi.dog/api/v2/breeds?page[size]=283`);
   const { data }: { data: DogBreed[] } = await response.json();
 
   const breed = data.filter((breed) => breed.attributes.name.toLowerCase().includes(q.toLowerCase()));
+  if (!response.ok) {
+    notFound();
+  }
 
   return (
     <>
@@ -23,6 +26,4 @@ export default async function SearchPage({ searchParams }: SearchPageprops) {
           <Link href={`/API/${breed.id}`}>{breed.attributes.name}</Link>
         </p>
       ))}
-    </>
-  );
-}
+    </>)}

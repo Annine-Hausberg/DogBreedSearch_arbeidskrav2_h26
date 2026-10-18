@@ -8,7 +8,7 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 type DogBreeds = DogBreed[];
 export default async function DogPage() {
-  const response = await fetch("https://dogapi.dog/api/v2/breeds");
+  const response = await fetch("https://dogapi.dog/api/v2/breeds?page[size]=283");
 
   if (!response.ok) {
     notFound();
