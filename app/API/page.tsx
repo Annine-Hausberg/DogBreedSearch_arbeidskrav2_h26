@@ -4,6 +4,7 @@ import "@/app/API/dogbreeds.css";
 import "@/app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 type DogBreeds = DogBreed[];
 export default async function DogPage() {
@@ -73,14 +74,15 @@ export default async function DogPage() {
         <section className="dogBreed-section">
           {breeds.map((breed) => (
             <article className="dogBreed-card" key={breed.id}>
-              <Image alt="test" src={breed.attributes.images[0].thumb} width={200} height={200} />
-              <h3>Sted</h3>
+              <Image alt="test" src={breed.attributes.images[0].large} width={368} height={368} />
               <h2>{breed.attributes.name}</h2>
-              <h3>kort beskrivelse av lynnet</h3>
-              <p>
-                <strong>Kalles også:</strong> {breed.attributes.other_names.join(", ")}{" "}
-              </p>
-              <Link className="CTA" href={`/API/${breed.id}`}>Utforsk rasen</Link>
+              <hr className="divider" />
+              <div className="bottom-line-card">
+                <ArrowRightIcon size={22} />
+                <Link className="explore-breed-link" href={`/API/${breed.id}`}>
+                  Utforsk rasen
+                </Link>
+              </div>
             </article>
           ))}
         </section>
