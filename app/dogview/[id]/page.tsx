@@ -1,6 +1,6 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
-import "@/app/API/dogbreeds.css";
+import "@/app/dogview/dogbreeds.css";
 import Image from "next/image";
 import { barkingText, energyText, temperamentText } from "@/Data/Texts";
 import { apartmentFriendlyText } from "@/Data/Texts";

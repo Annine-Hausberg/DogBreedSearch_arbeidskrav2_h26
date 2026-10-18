@@ -1,14 +1,21 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
-import "@/app/API/dogbreeds.css";
+import "@/app/dogview/dogbreeds.css";
 import "@/app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
+import { DOGBREED_API_ENDPOINT } from "@/constants/dogbreed-api";
+
+export type PagniatedDogPageProps = {
+  params: Promise<{ pageNumber: string }>;
+};
 
 type DogBreeds = DogBreed[];
-export default async function DogPage() {
-  const response = await fetch("https://dogapi.dog/api/v2/breeds?page[size]=283");
+export default async function PagniatedDogPage({ params }: PagniatedDogPageProps) {
+  const { pageNumber } = await params;
+  const page = Math.max(1, Number(pageNumber) || 1)
+  const response = await fetch(`${DOGBREED_API_ENDPOINT}?page[number]=${pageNumber}&page[size]=30`);
 
   if (!response.ok) {
     notFound();
@@ -21,7 +28,7 @@ export default async function DogPage() {
     <>
       <section className="dog-page-container">
         <aside>
-          <h3>Her kommer filtreringsfunksjonene</h3>
+          <h3>Side {pageNumber}</h3>
           <hr />
           <form action="" className="size-choices">
             <h4 className="size-choices-header">Størrelse</h4>
@@ -79,13 +86,18 @@ export default async function DogPage() {
               <hr className="divider" />
               <div className="bottom-line-card">
                 <ArrowRightIcon size={22} />
-                <Link className="explore-breed-link" href={`/API/${breed.id}`}>
+                <Link className="explore-breed-link" href={`/dogview/${breed.id}`}>
                   Utforsk rasen
                 </Link>
               </div>
             </article>
           ))}
         </section>
+        <div className="page-navigation">
+          {page > 1 && <Link href={`/dogview/page/${page - 1}`}>Forrige</Link>}
+          <span>Side {pageNumber}</span>
+          <Link href={`/dogview/page/${page + 1}`}>Neste</Link>
+        </div>
       </section>
     </>
   );

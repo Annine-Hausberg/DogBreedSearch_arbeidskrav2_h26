@@ -9,17 +9,19 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <Image className="logo" src={logo} alt="Logo for hundekatalogen" />
-        
+        <Link href={"/"}>
+          <Image className="logo" src={logo} alt="Logo for hundekatalogen" />
+        </Link>
+
         <div className="nav-right-section">
           <Link href={"/"}>Hjem</Link>
-          <Link href={"/API"}>Hunderaser</Link>
+          <Link href={"/dogview/page/1"}>Hunderaser</Link>
           <Link href={"/About"}>Om siden</Link>
         </div>
       </nav>
       <section className="hero-section">
         <Image className="hero-img" src={heroImg} alt="AI generert bilde av søte hunder" />
-<SearchInput />
+        <SearchInput />
       </section>
     </header>
   );

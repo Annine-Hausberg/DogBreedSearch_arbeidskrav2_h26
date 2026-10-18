@@ -119,3 +119,20 @@ aside {
   display: flex;
   outline: none;
 }
+
+.page-navigation {
+  grid-column: 2;
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  color: white;
+  align-items: center;
+
+
+}
+.page-navigation a {
+  color: white;
+  text-decoration: none;
+  border: solid thin white;
+  padding: 0.5rem;
+}

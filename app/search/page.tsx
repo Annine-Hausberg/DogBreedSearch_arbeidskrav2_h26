@@ -23,7 +23,7 @@ export default async function SearchPage({ searchParams }: SearchPageprops) {
       <h1>Søk etter {q}</h1>
       {breed.map((breed) => (
         <p key={breed.id}>
-          <Link href={`/API/${breed.id}`}>{breed.attributes.name}</Link>
+          <Link href={`/dogview/${breed.id}`}>{breed.attributes.name}</Link>
         </p>
       ))}
     </>)}
