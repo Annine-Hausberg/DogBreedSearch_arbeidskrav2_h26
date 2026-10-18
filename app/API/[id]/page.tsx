@@ -26,7 +26,6 @@ export default async function DogBreedPage({ params }: props) {
   return (
     <>
       <section className="dog-page-container">
-        <button>trykk her</button>
         <aside>
           <h3> Om {breed.attributes.name}</h3>
           <hr />

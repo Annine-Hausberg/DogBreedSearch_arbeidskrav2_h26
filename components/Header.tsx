@@ -1,29 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
-import heroImg from "@/assets/hero_img.png";
+import heroImg from "@/assets/hero_img3.png";
+import logo from "@/assets/logo.png";
 import "@/app/globals.css";
+import SearchInput from "./Search";
 
 export default function Header() {
   return (
     <header>
       <nav>
-        <h1>logo</h1>
-        <Link href={"/"}>Hjem</Link>
-        <Link href={"/API"}>Hunderaser</Link>
-        <Link href={"/About"}>Om siden</Link>
+        <Image className="logo" src={logo} alt="Logo for hundekatalogen" />
+        
+        <div className="nav-right-section">
+          <Link href={"/"}>Hjem</Link>
+          <Link href={"/API"}>Hunderaser</Link>
+          <Link href={"/About"}>Om siden</Link>
+        </div>
       </nav>
       <section className="hero-section">
-        <div className="hero-section-text">
-          <p className="hero-section-slogan">En god start på et langt vennskap</p>
-          <p>
-            Trenger du en turkompis, en rolig liten krabat som elsker å ligge på sofaen, eller en ivrig fulejeger? I
-            rasekatalogen kan du finne den hunderasen som passer best til dine behov.
-          </p>
-
-          <button className="CTA">Gå til hundekatalogen</button>
-        </div>
-
-        <Image className="hero-img" src={heroImg} alt="Bilde av søte hunder" />
+        <Image className="hero-img" src={heroImg} alt="AI generert bilde av søte hunder" />
+<SearchInput />
       </section>
     </header>
   );
