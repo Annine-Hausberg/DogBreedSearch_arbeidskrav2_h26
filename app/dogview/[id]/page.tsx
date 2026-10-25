@@ -1,6 +1,7 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
 import "@/app/dogview/dogbreeds.css";
+import "@/app/globals.css"
 import Image from "next/image";
 import { barkingText, energyText, temperamentText } from "@/Data/Texts";
 import { apartmentFriendlyText } from "@/Data/Texts";
@@ -28,8 +29,9 @@ export default async function DogBreedPage({ params }: props) {
   return (
     <>
       <section className="dog-page-container">
-        <Link href={"/dogview/page/1"}>
-          <ArrowLeftIcon size={22} />Tilbake
+        <Link className="Link-button" href={"/dogview/page/1"}>
+          <ArrowLeftIcon size={22} />
+          Tilbake
         </Link>
         <aside>
           <h3> Om {breed.attributes.name}</h3>
@@ -69,17 +71,17 @@ export default async function DogBreedPage({ params }: props) {
           <Image
             className="IndividualBreed-image"
             key={breed.id}
-            alt='Bilde av ${breed.attributes.name}'
+            alt="Bilde av ${breed.attributes.name}"
             src={breed.attributes.images[0].thumb}
             width={300}
             height={300}
           />
-          <div className="individualBreed-firstColumn">
-            <h1 className="IndividualBreed-header">{breed.attributes.name}</h1>
+          <article>
+            <h1>{breed.attributes.name}</h1>
             <p>
               <CompatibleOwner traits={breed.attributes.traits} />
             </p>
-          </div>
+          </article>
         </section>
       </section>
     </>

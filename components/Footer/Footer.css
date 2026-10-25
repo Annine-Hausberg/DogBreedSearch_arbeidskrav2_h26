@@ -1,0 +1,15 @@
+.footer {
+  background-color: #595149;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  padding: 0.5rem 2rem;
+  justify-content: end;
+  align-items: start;
+}
+.search-result a {
+  color: white;
+  text-decoration: none;
+}

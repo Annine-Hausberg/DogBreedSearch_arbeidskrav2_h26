@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { DogBreed } from "@/types/DogBreeds";
 import Link from "next/link";
-import "@/app/globals.css"
+import "@/app/globals.css";
 
 export type SearchPageprops = {
   searchParams: Promise<{
@@ -21,11 +21,17 @@ export default async function SearchPage({ searchParams }: SearchPageprops) {
   return (
     <section className="search-result">
       <h1>Søk etter {q}</h1>
-      {breed.map((breed) => (
-        <p key={breed.id}>
-          <Link href={`/dogview/${breed.id}`}>{breed.attributes.name}</Link>
-        </p>
-      ))}
+      {breed.length === 0 ? (
+        <p>Fant ingen hunderaser som passer {q}</p>
+      ) : (
+        breed.map((breed) => (
+          <p key={breed.id}>
+            <Link className="Link-button" href={`/dogview/${breed.id}`}>
+              {breed.attributes.name}
+            </Link>
+          </p>
+        ))
+      )}
     </section>
   );
 }

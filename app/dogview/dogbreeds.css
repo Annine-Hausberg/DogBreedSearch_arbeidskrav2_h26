@@ -2,17 +2,14 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin: 2rem;
-  gap: 1rem;  
+  gap: 1rem;
 }
+
 .dogBreed-section {
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-
-  .individualBreed-section {
-    display: flex;
-  }
 
   .dogBreed-card {
     border-radius: 1rem;
@@ -25,30 +22,27 @@
     align-items: center;
     padding-bottom: 0.5rem;
   }
-.divider {
-border: none;
-border-top: rgb(234, 225, 225) 1px solid;
-  width: 100%;
-}
-.bottom-line-card {
-display: flex;
-align-items: center;
-margin-left: auto;
-margin-right: 0.5rem;
-color: #7A6451;
-}
-.explore-breed-link {
-  color: #7A6451;
-  text-decoration: none;
-
-}
+  .divider {
+    border: none;
+    border-top: rgb(234, 225, 225) 1px solid;
+    width: 100%;
+  }
+  .bottom-line-card {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    color: #7a6451;
+  }
+  #explore-breed-link {
+    color: #7a6451;
+  }
   .dogBreed-card img {
     display: flex;
     border-radius: 1rem 1rem 0rem 0rem;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     object-position: 20% 20%;
-   
   }
 
   .dogBreed-card button {
@@ -64,23 +58,6 @@ color: #7A6451;
   }
 }
 
-aside {
-  grid-column: 1;
-  background-color: white;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  padding: 1rem;
-
-  .size-choices-header {
-    grid-column: 1 / -1;
-  }
-}
-
-.searchform {
-  grid-column: 1 / -1;
-}
 #searchinput {
   height: 2.5rem;
   margin: 2rem 0;
@@ -88,31 +65,18 @@ aside {
   width: 100%;
   padding: 1rem;
 }
-.activity-choices,
-.coatCare-choices,
-.size-choices,
-.experience-choices {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 0.5rem;
-}
 
 .individualBreed-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 1rem;
 
-  .individualBreed-firstColumn {
-    display: flex;
-    flex-direction: column;
- gap: 0.5rem;
+  .IndividualBreed-image {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    justify-self: right;
+    border-radius: 50%;
   }
-.IndividualBreed-image {
-  grid-row: 1 /span 2;
-  grid-column: 2;
-  justify-self: right;
-  border-radius: 50%;
-}
 }
 
 .search-input {
@@ -127,12 +91,40 @@ aside {
   gap: 1rem;
   color: white;
   align-items: center;
-
-
 }
 .page-navigation a {
   color: white;
   text-decoration: none;
   border: solid thin white;
   padding: 0.5rem;
+}
+
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .dog-page-container {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+
+  .dogBreed-section {
+    grid-column: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .page-navigation {
+    grid-column: 1;
+  }
+}
+@media (max-width: 800px) {
+  .dog-page-container {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+
+  .dogBreed-section {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+  }
+  .page-navigation {
+    grid-column: 1;
+  }
 }

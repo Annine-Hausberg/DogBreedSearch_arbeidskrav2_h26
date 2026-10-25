@@ -18,6 +18,31 @@ html {
   --button-background: #8b6a4e;
 }
 
+/*Navigasjonslenker med felles oppførsel*/
+.Link-button {
+  display: flex;
+  color: white;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Link-button:hover {
+  color: black;
+}
+
+.Link-button:active {
+  color: black;
+  transform: translateY(0.1rem);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
 /*Globale fonter*/
 h1 {
   font-family: "inter", sans-serif;
@@ -36,97 +61,6 @@ h3 {
   font-size: 1rem;
 }
 
-/*header-seksjon*/
-
-.hero-section {
-  background-color: #fefefe;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0.5rem 0rem;
-  position: relative;
-}
-
-.hero-img {
-  display: block;
-  justify-content: center;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  height: auto;
-}
-nav {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem 2rem 2rem 1rem;
-  height: 3rem;
-
-  .nav-right-section {
-    display: flex;
-    gap: 1.5rem;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-
-  a:hover {
-    color: blue;
-  }
-
-  a:active {
-    transform: translateY(0.1rem);
-  }
-  .logo {
-    display: block;
-    justify-content: center;
-    width: 30%;
-    object-fit: cover;
-    height: auto;
-  }
-}
-
-.searchform {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 20rem;
-  align-self: center;
-}
-.search-input {
-  display: flex;
-  outline: none;
-  border-radius: 0.5rem;
-  width: 20rem;
-  height: 2.5rem;
-  border: solid thin;
-  background-color: white;
-  color: var(--button-background);
-  padding: 0.75rem 3rem 0.75rem 1rem;
-}
-.search-input-button {
-  position: absolute;
-  right: 0.5rem;
-  background-color: white;
-  border: none;
-}
-.CTA {
-  display: flex;
-  outline: none;
-  border-radius: 0.5rem;
-  width: 10rem;
-  height: 2.5rem;
-  background-color: var(--button-background);
-  color: white;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-}
 .index-header {
   padding: 2rem;
 }
@@ -147,22 +81,13 @@ nav {
 }
 
 .filter {
-display: flex;
-flex-direction: column;
-gap: 0.5rem;
-}
-
-/*Styling for footer*/
-.footer {
-  background-color: #595149;
-  height: 10rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  color: white;
-  padding: 0.5rem 2rem;
+  gap: 0.5rem;
 }
-.search-result a {
-  color: white;
-  text-decoration: none;
+@media (min-width: 801px) {
+  .filter-details::details-content {
+    content-visibility: visible;
+    display: block;
+  }
 }

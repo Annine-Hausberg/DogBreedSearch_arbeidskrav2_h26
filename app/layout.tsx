@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header/Header";
 import "./globals.css";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -9,7 +9,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="app-container">
           <Header />
           <main>{children}</main>
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>
