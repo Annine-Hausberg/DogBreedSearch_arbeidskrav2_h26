@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <section className="footer">
-      <p>bla bla bla</p>
-      <p>blablabla</p>
+      <p> Siden er laget av Annine Hausberg (2026) </p>
+   
     </section>
   );
 }

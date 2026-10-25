@@ -13,7 +13,7 @@ html {
 :root {
   --Main-txt: #263538;
   --card-color: white;
-  --background-color: #7A6451;
+  --background-color: #7a6451;
   --header-background: #e8dccb;
   --button-background: #8b6a4e;
 }
@@ -127,6 +127,30 @@ nav {
   justify-content: center;
   align-items: center;
 }
+.index-header {
+  padding: 2rem;
+}
+.index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.home-section {
+  border-radius: 1rem;
+  background-color: white;
+  width: 45%;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.filter {
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
 
 /*Styling for footer*/
 .footer {
@@ -137,4 +161,8 @@ nav {
   width: 100%;
   color: white;
   padding: 0.5rem 2rem;
+}
+.search-result a {
+  color: white;
+  text-decoration: none;
 }

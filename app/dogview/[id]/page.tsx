@@ -6,6 +6,8 @@ import { barkingText, energyText, temperamentText } from "@/Data/Texts";
 import { apartmentFriendlyText } from "@/Data/Texts";
 import { groomingText } from "@/Data/Texts";
 import CompatibleOwner from "@/components/CompatibleOwner";
+import Link from "next/link";
+import { ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 
 type props = {
   params: Promise<{ id: string }>;
@@ -26,6 +28,9 @@ export default async function DogBreedPage({ params }: props) {
   return (
     <>
       <section className="dog-page-container">
+        <Link href={"/dogview/page/1"}>
+          <ArrowLeftIcon size={22} />Tilbake
+        </Link>
         <aside>
           <h3> Om {breed.attributes.name}</h3>
           <hr />
@@ -64,15 +69,13 @@ export default async function DogBreedPage({ params }: props) {
           <Image
             className="IndividualBreed-image"
             key={breed.id}
-            alt="test"
+            alt='Bilde av ${breed.attributes.name}'
             src={breed.attributes.images[0].thumb}
             width={300}
             height={300}
           />
           <div className="individualBreed-firstColumn">
             <h1 className="IndividualBreed-header">{breed.attributes.name}</h1>
-            <p className="IndividualBreed-p">{breed.attributes.description}</p>
-            <br />
             <p>
               <CompatibleOwner traits={breed.attributes.traits} />
             </p>

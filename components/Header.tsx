@@ -16,7 +16,7 @@ export default function Header() {
         <div className="nav-right-section">
           <Link href={"/"}>Hjem</Link>
           <Link href={"/dogview/page/1"}>Hunderaser</Link>
-          <Link href={"/About"}>Om siden</Link>
+          <Link href={"/about"}>Om siden</Link>
         </div>
       </nav>
       <section className="hero-section">
