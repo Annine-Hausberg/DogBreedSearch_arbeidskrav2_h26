@@ -4,9 +4,9 @@ import "@/app/globals.css";
 export default function Home() {
   return (
     <>
-      <h1 className="index-header">Velkommen til hundekatalogen</h1>
       <main className="index-container">
-        <section className="home-section">
+        <h1>Velkommen til hundekatalogen</h1>
+        <section >
           <h2>Hva er hundekatalogen?</h2>
           <p>
             Hundekatalogen er en nettside for deg som bare er nysgjerrig på ulike hunderaser, og deg som søker en ny
@@ -15,7 +15,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="home-section">
+        <section >
           <h2>Betydningen av gode undersøkelser</h2>
           <p>
             Trenger du en turkompis, en rolig liten krabat som elsker å ligge på sofaen, eller en ivrig fulejeger? I

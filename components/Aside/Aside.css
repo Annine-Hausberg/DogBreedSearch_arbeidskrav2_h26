@@ -16,6 +16,18 @@ aside {
   grid-column: 1 / -1;
 }
 
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 801px) {
+  .filter-details::details-content {
+    content-visibility: visible;
+    display: block;
+  }
+}
+
 @media (min-width: 801px) and (max-width: 1200px) {
   aside {
     grid-column: 1;

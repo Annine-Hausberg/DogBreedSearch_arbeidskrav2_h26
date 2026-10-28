@@ -61,33 +61,10 @@ h3 {
   font-size: 1rem;
 }
 
-.index-header {
-  padding: 2rem;
-}
 .index-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 2rem;
   gap: 2rem;
-}
-
-.home-section {
-  border-radius: 1rem;
-  background-color: white;
-  width: 45%;
-  padding: 2rem;
-  gap: 1rem;
-}
-
-.filter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-@media (min-width: 801px) {
-  .filter-details::details-content {
-    content-visibility: visible;
-    display: block;
-  }
 }
