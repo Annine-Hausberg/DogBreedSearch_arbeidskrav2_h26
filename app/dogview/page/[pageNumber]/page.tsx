@@ -28,11 +28,12 @@ export default async function PagniatedDogPage({ params }: PagniatedDogPageProps
   return (
     <>
       <section className="dog-page-container">
+        <h1>Hundekatalogen</h1>
         <FilterAside />
         <section className="dogBreed-section">
           {breeds.map((breed) => (
             <article className="dogBreed-card" key={breed.id}>
-              <Image alt={breed.attributes.name} src={breed.attributes.images[0].large} width={368} height={368} />
+              <Image alt="" src={breed.attributes.images[0].large} width={368} height={368} />
               <h2>{breed.attributes.name}</h2>
               <hr className="divider" />
               <div className="bottom-line-card">

@@ -1,10 +1,9 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
 import "@/app/dogview/dogbreeds.css";
-import "@/app/globals.css"
+import "@/app/globals.css";
 import Image from "next/image";
 import { barkingText, energyText, temperamentText } from "@/Data/Texts";
-import { apartmentFriendlyText } from "@/Data/Texts";
 import { groomingText } from "@/Data/Texts";
 import CompatibleOwner from "@/components/CompatibleOwner";
 import Link from "next/link";
@@ -68,14 +67,15 @@ export default async function DogBreedPage({ params }: props) {
           </section>
         </aside>
         <section className="individualBreed-section">
+          {breed.attributes.images[0] && (
           <Image
             className="IndividualBreed-image"
             key={breed.id}
-            alt="Bilde av ${breed.attributes.name}"
+            alt={`Bilde av ${breed.attributes.name}`}
             src={breed.attributes.images[0].thumb}
             width={300}
             height={300}
-          />
+          />)}
           <article>
             <h1>{breed.attributes.name}</h1>
             <p>

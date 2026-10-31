@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-  --Main-txt: #263538;
+  --Main-txt: black;
   --card-color: white;
   --background-color: #7a6451;
   --header-background: #e8dccb;
@@ -24,6 +24,13 @@ html {
   color: white;
   align-items: center;
   text-decoration: none;
+}
+.Link-button-2 {
+  display: flex;
+  color: white;
+  align-items: center;
+  text-decoration: underline;
+  margin: auto;
 }
 
 .Link-button:hover {
@@ -43,6 +50,7 @@ html {
 main {
   flex: 1;
 }
+
 /*Globale fonter*/
 h1 {
   font-family: "inter", sans-serif;
@@ -61,10 +69,24 @@ h3 {
   font-size: 1rem;
 }
 
-.index-container {
+.page-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 0.5rem 2rem ;
+  gap: 1rem;
+  color: white;
+}
+.page-section {
+  display: flex;
+  background-color: #595149;
+  border-radius: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%
+}
+
+.header-txt {
   padding: 2rem;
-  gap: 2rem;
 }

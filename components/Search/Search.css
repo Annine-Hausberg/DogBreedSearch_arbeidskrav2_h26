@@ -1,0 +1,29 @@
+.searchform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20rem;
+  align-self: center;
+}
+.search-input {
+  display: flex;
+  outline: none;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 2.5rem;
+  border: solid thin;
+  background-color: white;
+  color: var(--button-background);
+  padding: 0.75rem 3rem 0.75rem 1rem;
+}
+
+.search-input:focus-visible {
+    outline: .0063rem solid black;
+}
+.search-input-button {
+  position: absolute;
+  right: 0.5rem;
+  background-color: white;
+  border: none;
+}

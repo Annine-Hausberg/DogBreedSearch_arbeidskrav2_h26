@@ -20,6 +20,11 @@ nav {
   a:active {
     transform: translateY(0.1rem);
   }
+
+  a:focus-visible {
+    outline: 0.1875rem solid black;
+    outline-offset: 0.25rem;
+  }
   .logo {
     display: block;
     justify-content: center;
@@ -47,28 +52,3 @@ nav {
   height: auto;
 }
 
-.searchform {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 20rem;
-  align-self: center;
-}
-.search-input {
-  display: flex;
-  outline: none;
-  border-radius: 0.5rem;
-  width: 20rem;
-  height: 2.5rem;
-  border: solid thin;
-  background-color: white;
-  color: var(--button-background);
-  padding: 0.75rem 3rem 0.75rem 1rem;
-}
-.search-input-button {
-  position: absolute;
-  right: 0.5rem;
-  background-color: white;
-  border: none;
-}

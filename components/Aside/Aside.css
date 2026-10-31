@@ -7,9 +7,6 @@ aside {
   border-radius: 0.5rem;
   padding: 1rem;
 
-  .size-choices-header {
-    grid-column: 1 / -1;
-  }
 }
 
 .searchform {
@@ -19,6 +16,11 @@ aside {
 .filter {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.filter-checkbox {
+  display: flex;
   gap: 0.5rem;
 }
 @media (min-width: 801px) {
