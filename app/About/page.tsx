@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <>
-      <h1 className="header-txt">Om siden</h1>
       <section className="page-container">
+        <h1 className="header-txt">Om siden</h1>
         <section className="page-section">
           <h2>Målgruppe</h2>
 

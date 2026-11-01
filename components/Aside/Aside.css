@@ -1,12 +1,17 @@
 aside {
   grid-column: 1;
-  background-color: white;
+  background-color: #f7f2eb;
+  color: black;
   gap: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
   padding: 1rem;
+}
 
+aside legend,
+aside input {
+  color: black;
 }
 
 .searchform {

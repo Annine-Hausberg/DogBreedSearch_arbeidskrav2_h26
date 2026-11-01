@@ -25,13 +25,6 @@ html {
   align-items: center;
   text-decoration: none;
 }
-.Link-button-2 {
-  display: flex;
-  color: white;
-  align-items: center;
-  text-decoration: underline;
-  margin: auto;
-}
 
 .Link-button:hover {
   color: black;
@@ -73,20 +66,31 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0.5rem 2rem ;
+  margin: 2rem;
   gap: 1rem;
   color: white;
 }
 .page-section {
   display: flex;
-  background-color: #595149;
+  background-color: #F7F2EB;
+  color: #595149;
   border-radius: 1rem;
   padding: 1rem;
   flex-direction: column;
   gap: 1rem;
-  width: 100%
+  width: 100%;
 }
 
-.header-txt {
-  padding: 2rem;
+.explore-btn {
+  display: flex;
+  background-color: #7a6451;
+  color: white;
+  align-items: center;
+  margin: auto;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
 }
+
+

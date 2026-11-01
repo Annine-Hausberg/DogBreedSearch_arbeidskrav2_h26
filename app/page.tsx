@@ -1,7 +1,5 @@
-import Image from "next/image";
-
-import "@/app/globals.css";
 import Link from "next/link";
+import { PawPrintIcon } from "@phosphor-icons/react/dist/ssr";
 export default function Home() {
   return (
     <>
@@ -12,12 +10,16 @@ export default function Home() {
           <p>
             Hundekatalogen er et verktøy for deg som bare er nysgjerrig på ulike hunderaser, eller deg som søker en ny
             bestevenn. På denne siden kan du både søke informasjon om de rasene som interesserer deg, eller filtrere for
-            å finne en perfekt match. Per dags dato består hundekatalogen av hele 283 raser.
+            å finne en perfekt match.
           </p>
+          <p>
+            <PawPrintIcon size={20} />
+            283 raser å utforske
+          </p>
+          <Link className="explore-btn" href={"/dogview"}>
+            Trykk her for å utforske katalogen
+          </Link>
         </section>
-        <Link className="Link-button-2" href={"/dogview"}>
-          Trykk her for å utforske katalogen
-        </Link>
       </main>
     </>
   );

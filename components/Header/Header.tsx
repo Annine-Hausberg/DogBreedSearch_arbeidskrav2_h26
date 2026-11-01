@@ -13,7 +13,7 @@ export default function Header() {
         <Link href={"/about"}>Om siden</Link>
       </nav>
       <section className="hero-section">
-        <Image className="hero-img" src={heroImg} alt="AI generert bilde av søte hunder" />
+        <Image className="hero-img" src={heroImg} alt="AI generert bilde av søte hunder" loading="eager" />
         <SearchInput />
       </section>
     </header>

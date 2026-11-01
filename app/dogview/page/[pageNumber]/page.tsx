@@ -1,7 +1,6 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
 import "@/app/dogview/dogbreeds.css";
-import "@/app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
@@ -38,7 +37,7 @@ export default async function PagniatedDogPage({ params }: PagniatedDogPageProps
               <hr className="divider" />
               <div className="bottom-line-card">
                 <ArrowRightIcon size={22} />
-                <Link className="Link-button" id="explore-breed-link" href={`/dogview/${breed.id}`}>
+                <Link className="explore-breed-link" href={`/dogview/${breed.id}`}>
                   Utforsk rasen
                 </Link>
               </div>

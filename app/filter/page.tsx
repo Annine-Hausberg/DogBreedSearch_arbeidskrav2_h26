@@ -56,7 +56,7 @@ export default async function Filterpage({
               <hr className="divider" />
               <div className="bottom-line-card">
                 <ArrowRightIcon size={22} />
-                <Link className="Link-button" id="explore-breed-link" href={`/dogview/${breed.id}`}>
+                <Link className="explore-breed-link" href={`/dogview/${breed.id}`}>
                   Utforsk rasen
                 </Link>
               </div>

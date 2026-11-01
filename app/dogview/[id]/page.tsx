@@ -1,7 +1,6 @@
 import { type DogBreed } from "@/types/DogBreeds";
 import { notFound } from "next/navigation";
 import "@/app/dogview/dogbreeds.css";
-import "@/app/globals.css";
 import Image from "next/image";
 import { barkingText, energyText, temperamentText } from "@/Data/Texts";
 import { groomingText } from "@/Data/Texts";
@@ -18,9 +17,8 @@ export default async function DogBreedPage({ params }: props) {
 
   const response = await fetch(`https://dogapi.dog/api/v2/breeds/${id}`);
 
-  if (!response.ok) {
-    notFound();
-  }
+  if (response.status === 404) notFound();
+  if (!response.ok) throw new Error("Kunne ikke hente hunderase");
 
   const data = await response.json();
   const breed: DogBreed = data.data;
@@ -32,7 +30,7 @@ export default async function DogBreedPage({ params }: props) {
           <ArrowLeftIcon size={22} />
           Tilbake
         </Link>
-        <aside>
+        <aside className="aside">
           <h3> Om {breed.attributes.name}</h3>
           <hr />
           <section>
@@ -68,17 +66,18 @@ export default async function DogBreedPage({ params }: props) {
         </aside>
         <section className="individualBreed-section">
           {breed.attributes.images[0] && (
-          <Image
-            className="IndividualBreed-image"
-            key={breed.id}
-            alt={`Bilde av ${breed.attributes.name}`}
-            src={breed.attributes.images[0].thumb}
-            width={300}
-            height={300}
-          />)}
+            <Image
+              className="IndividualBreed-image"
+              key={breed.id}
+              alt={`Bilde av ${breed.attributes.name}`}
+              src={breed.attributes.images[0].thumb}
+              width={300}
+              height={300}
+            />
+          )}
           <article>
             <h1>{breed.attributes.name}</h1>
-            <p>
+            <p >
               <CompatibleOwner traits={breed.attributes.traits} />
             </p>
           </article>
